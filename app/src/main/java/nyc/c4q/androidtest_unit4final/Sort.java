@@ -22,5 +22,35 @@ public class Sort {
         // You may not use Collections.sort or its equivalent
         // You may not implement another sorting algorithm that is not "selection sort"
         // Tip: Try a version without ordering first.
+        if (isAscending) {
+            for (int i = list.size(); i > 0; i--) {
+                int index = 0;
+                for (int j = 0; j < i; j++) {
+                    if (list.get(j).compareTo(list.get(index)) > 0) {
+                        index = j;
+                    }
+                    String temp = list.get(index);
+                    list.set(index, list.get(i - 1));
+                    list.set(i - 1, temp);
+                }
+            }
+        } else {
+            for (int i = list.size(); i > 0; i--) {
+                int index = 0;
+                for (int j = 0; j < i; j++) {
+                    if (list.get(j).compareTo(list.get(index)) < 0) {
+                        index = j;
+                    }
+                    String temp = list.get(index);
+                    list.set(index, list.get(i - 1));
+                    list.set(i - 1, temp);
+                }
+            }
+        }
+
+
+
+
+
     }
 }
