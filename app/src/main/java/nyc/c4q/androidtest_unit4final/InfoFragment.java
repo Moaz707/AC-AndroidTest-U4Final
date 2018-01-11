@@ -30,8 +30,10 @@ public class InfoFragment extends Fragment {
             public void onClick(View v) {
                 if (textView.getVisibility() == View.VISIBLE) {
                     textView.setVisibility(View.GONE);
+                    moreInfo.setVisibility(View.GONE);
                 } else {
                     textView.setVisibility(View.VISIBLE);
+                    moreInfo.setVisibility(View.GONE);
                 }
             }
         });
