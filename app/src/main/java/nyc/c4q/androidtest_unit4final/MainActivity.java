@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 adapter.notifyDataSetChanged();
             }
-        }, 2000);
+        }, 5000);
     }
 
     // TODO: Add options menu with the item "Info" which is always visible
